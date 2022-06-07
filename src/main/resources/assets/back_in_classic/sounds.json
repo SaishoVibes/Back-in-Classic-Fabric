@@ -1,0 +1,197 @@
+{
+  "birds_chirping": {
+    "category": "ambient",
+    "subtitle": "subtitles.birds_chirping",
+    "sounds": [
+      {
+        "name": "back_in_classic:birds",
+        "stream": false
+      }
+    ]
+  },
+  "cave_chimes": {
+    "category": "ambient",
+    "subtitle": "subtitles.cave_chimes",
+    "sounds": [
+      {
+        "name": "back_in_classic:chimes",
+        "stream": false
+      }
+    ]
+  },
+  "ocean_loop": {
+    "category": "ambient",
+    "subtitle": "subtitles.ocean",
+    "sounds": [
+      {
+        "name": "back_in_classic:ocean",
+        "stream": false
+      }
+    ]
+  },
+  "waterfall": {
+    "category": "block",
+    "subtitle": "subtitles.waterfall",
+    "sounds": [
+      {
+        "name": "back_in_classic:waterfall",
+        "stream": false
+      }
+    ]
+  },
+  "instant_bow_shot": {
+    "category": "player",
+    "subtitle": "subtitles.instant_bow_shot",
+    "sounds": [
+      {
+        "name": "back_in_classic:bow_shooting_old",
+        "stream": false
+      }
+    ]
+  },
+  "human_death": {
+    "category": "hostile",
+    "subtitle": "subtitles.human_death",
+    "sounds": [
+      {
+        "name": "back_in_classic:fallsmall",
+        "stream": false
+      }
+    ]
+  },
+  "human_oof": {
+    "category": "hostile",
+    "subtitle": "subtitles.human_oof",
+    "sounds": [
+      {
+        "name": "back_in_classic:hurt_old",
+        "stream": false
+      }
+    ]
+  },
+  "flake": {
+    "category": "music",
+    "subtitle": "subtitles.flake",
+    "sounds": [
+      {
+        "name": "back_in_classic:flake",
+        "stream": true,
+        "volume": 0.25
+      }
+    ]
+  },
+  "kyoto": {
+    "category": "music",
+    "subtitle": "subtitles.kyoto",
+    "sounds": [
+      {
+        "name": "back_in_classic:kyoto",
+        "stream": true,
+        "volume": 0.25
+      }
+    ]
+  }
+}
+/*
+,
+  "music.creative": {
+    "sounds": [
+      {
+        "name": "music.game",
+        "type": "event"
+      },
+      {
+        "name": "music/game/creative/creative1",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/creative2",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/creative3",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/creative4",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/creative5",
+        "stream": true
+      },
+      {
+        "name": "music/game/creative/creative6",
+        "stream": true
+      },
+      {
+        "name": "back_in_classic:music/flake",
+        "stream": true
+      },
+      {
+        "name": "back_in_classic:music/kyoto",
+        "stream": true
+      }
+    ]
+  },
+  "music.game": {
+    "sounds": [
+      {
+        "name": "music/game/calm1",
+        "stream": true
+      },
+      {
+        "name": "music/game/calm2",
+        "stream": true
+      },
+      {
+        "name": "music/game/calm3",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal1",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal2",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal3",
+        "stream": true
+      },
+      {
+        "name": "music/game/hal4",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance1",
+        "stream": true
+      },
+      {
+        "name": "music/game/nuance2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano1",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano2",
+        "stream": true
+      },
+      {
+        "name": "music/game/piano3",
+        "stream": true
+      },
+      {
+        "name": "back_in_classic:music/flake",
+        "stream": true
+      },
+      {
+        "name": "back_in_classic:music/kyoto",
+        "stream": true
+      }
+    ]
+  }
+  */
