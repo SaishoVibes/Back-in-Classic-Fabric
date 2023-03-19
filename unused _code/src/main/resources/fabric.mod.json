@@ -1,32 +1,35 @@
 {
   "schemaVersion": 1,
   "id": "back_in_classic",
-  "version": "0.0.1",
+  "version": "${version}",
 
   "name": "Back in Classic",
   "description": "Bringing back Classic Features with new functions!",
   "authors": [
-    "SaishoVibes"
+    "SaishoVibes, Charles445"
   ],
   "contact": {
-    "homepage": "https://github.com/SaishoVibes/Back-in-Classic",
-    "sources": "https://github.com/SaishoVibes/Back-in-Classic"
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
   "license": "CC0-1.0",
-  "icon": "icon.png",
+  "icon": "logo.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.saishovibes.back_in_classic.Back_In_Classic"
+      "net.saisho.BackinClassicFab"
     ]
   },
+  "mixins": [
+    "back_in_classic.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "1.19.4",
+    "minecraft": "~1.19",
     "java": ">=17"
   },
   "suggests": {
