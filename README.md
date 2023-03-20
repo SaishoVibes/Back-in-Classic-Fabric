@@ -8,11 +8,11 @@ This mod requires Fabric API to function
   </a>
 </p>
 
-#Currently Implemented Features
+# Currently Implemented Features
 - Wax Block
 - (More to come upon first release!)
 
-#What is Back in Classic?
+# What is Back in Classic?
 Back in Classic is a mod dedicated to bringing back most, if not all, 
 of the old and removed features of the game! I have decided to completely
 rewrite the mod in Fabric 1.19.4 for longevity going into newer versions!
