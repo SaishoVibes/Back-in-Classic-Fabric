@@ -6,7 +6,7 @@ out/
 classes/
 unused_code/
 .git/
-
+*.bat
 # eclipse
 
 *.launch
