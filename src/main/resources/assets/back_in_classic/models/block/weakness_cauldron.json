@@ -1,12 +1,12 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "back_in_classic:blocks/cauldron_side",
-        "top": "back_in_classic:blocks/cauldron_top",
-        "bottom": "back_in_classic:blocks/cauldron_bottom",
-        "side": "back_in_classic:blocks/cauldron_side",
-        "inside": "back_in_classic:blocks/cauldron_inner",
-        "water": "back_in_classic:blocks/weakness_still"
+        "particle": "back_in_classic:block/cauldron_side",
+        "top": "back_in_classic:block/cauldron_top",
+        "bottom": "back_in_classic:block/cauldron_bottom",
+        "side": "back_in_classic:block/cauldron_side",
+        "inside": "back_in_classic:block/cauldron_inner",
+        "water": "back_in_classic:block/weakness_still"
     },
     "elements": [
         {
