@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.saishovibes.back_in_classic.Back_In_Classic"
+    ],
+    "client": [
+      "net.saishovibes.back_in_classic.Back_In_Classic_Client"
     ]
   },
 
