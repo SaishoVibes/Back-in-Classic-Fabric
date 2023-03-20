@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "back_in_classic:blocks/wax_block"
+    "down": "back_in_classic:blocks/wax_block",
+    "up": "back_in_classic:blocks/wax_block",
+    "north": "back_in_classic:blocks/wax_block",
+    "east": "back_in_classic:blocks/wax_block",
+    "south": "back_in_classic:blocks/wax_block",
+    "west": "back_in_classic:blocks/wax_block",
+    "particle": "back_in_classic:blocks/wax_block"
   }
 }
