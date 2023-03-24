@@ -23,7 +23,7 @@ public class Back_In_Classic implements ModInitializer {
         // Proceed with mild caution.
         back_in_classic_blocks.init();
         back_in_classic_items.init();
-        LOGGER.info("Hello Fabric world!");
+        LOGGER.info("Back in Classic Mod Initialized!");
     }
 }
 
