@@ -4,6 +4,7 @@
 build/
 out/
 classes/
+unused _code/
 unused_code/
 .git/
 *.bat
