@@ -11,6 +11,8 @@ This mod requires Fabric API to function
 # Currently Implemented Features
 - Wax Block
 - All added blocks, without  most of their features
+- All Old Biomes re-added to an extent
+- Lang Compatibilities with US, UK, and FR!
 - (More to come upon new releases!)
 
 # What is Back in Classic?
