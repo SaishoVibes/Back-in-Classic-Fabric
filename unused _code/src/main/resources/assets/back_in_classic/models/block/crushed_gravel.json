@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "back_in_classic:blocks/gravel",
-    "particle": "back_in_classic:blocks/gravel"
-  }
-}
