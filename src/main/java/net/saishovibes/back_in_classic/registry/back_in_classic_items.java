@@ -1,15 +1,15 @@
 package net.saishovibes.back_in_classic.registry;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroup;
-import static net.saishovibes.back_in_classic.Back_In_Classic.BACKINCLASSIC_GROUP;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.*;
+
 import net.saishovibes.back_in_classic.Back_In_Classic;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+//import net.saishovibes.back_in_classic.item.PlateArmorMaterial;
+//temp 3845946
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -43,7 +43,12 @@ public interface back_in_classic_items {
     //CAULDRONS
     Item AWK_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "awkward_cauldron"), new BlockItem(AWKWARD_CAULDRON, new FabricItemSettings()));
 
-
+    //ARMOR
+    //ArmorMaterial PlateArmorMaterial = new PlateArmorMaterial();
+    //ArmorItem PLATE_HELMET = register(new Identifier(MODID, "plate_helmet"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.HEAD, new Item.Settings()));
+    //ArmorItem PLATE_CHESTPLATE = register(new Identifier(MODID, "plate_chestplate"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.CHEST, new Item.Settings()));
+    //ArmorItem PLATE_LEGGINGS = register(new Identifier(MODID, "plate_leggings"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.LEGS, new Item.Settings()));
+    //ArmorItem PLATE_BOOTS = register(new Identifier(MODID, "plate_boots"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.FEET, new Item.Settings()));
     static <T extends Item> T register(Identifier id, T entry) {
         ITEMS.put(id, entry);
         return entry;
