@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.saishovibes.back_in_classic.registry.back_in_classic_blocks;
 import net.saishovibes.back_in_classic.registry.back_in_classic_items;
+import net.saishovibes.back_in_classic.events.cauldron_brewing;
 import net.saishovibes.back_in_classic.block.wax_block;
 
 import static net.saishovibes.back_in_classic.registry.back_in_classic_items.WAX_BLOCK_ITEM;
@@ -23,6 +24,7 @@ public class Back_In_Classic implements ModInitializer {
         // Proceed with mild caution.
         back_in_classic_blocks.init();
         back_in_classic_items.init();
+        cauldron_brewing.initialize();
         LOGGER.info("Back in Classic Mod Initialized!");
     }
 }
