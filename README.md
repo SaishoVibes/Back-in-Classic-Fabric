@@ -12,6 +12,7 @@ This mod requires Fabric API to function
 - Wax Block
 - All added blocks, without  most of their features
 - All Old Biomes re-added to an extent
+- Cauldron potion brewing!
 - Lang Compatibilities with US, UK, and FR!
 - (More to come upon new releases!)
 

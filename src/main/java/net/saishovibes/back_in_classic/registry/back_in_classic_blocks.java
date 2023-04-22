@@ -37,19 +37,19 @@ public interface back_in_classic_blocks {
 
     //CAULDRONS
     Block AWKWARD_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "awkward_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block FIRE_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "fire_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block FIRE_RES_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "fire_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block HARM_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "harm_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block HEAL_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "heal_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block INVIS_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "invis_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block JUMP_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "jump_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block NIGHT_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "night_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block NIGHT_VIS_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "night_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block POISON_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "poison_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block REGEN_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "regen_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block SLOW_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "slow_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block SLOWFALL_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "slowfall_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block SPEED_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "speed_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block STRENGTH_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "strength_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block WATER_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "water_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block WATER_BREATH_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "water_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block WEAKNESS_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "weakness_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
 
     static <T extends Block> T register(Identifier id, T entry) {
