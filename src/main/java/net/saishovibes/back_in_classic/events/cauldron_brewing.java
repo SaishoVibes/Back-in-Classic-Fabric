@@ -2,11 +2,14 @@ package net.saishovibes.back_in_classic.events;
 
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.*;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.potion.Potion;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -29,6 +32,7 @@ public class cauldron_brewing {
                 BlockPos blockPos = ((BlockHitResult) hitResult).getBlockPos();
                 BlockState state = world.getBlockState(blockPos);
                 Block block = state.getBlock();
+                Boolean ParticleSpawn = false;
 
                 //MAKING CAULDRONS
                 if (block == Blocks.WATER_CAULDRON && state.get(LeveledCauldronBlock.LEVEL) == 3) {
@@ -42,6 +46,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -56,6 +61,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -70,6 +76,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -84,6 +91,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -98,6 +106,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -112,6 +121,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -126,6 +136,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -140,6 +151,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -154,6 +166,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -168,6 +181,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -182,6 +196,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -199,6 +214,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -213,6 +229,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -227,6 +244,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -241,6 +259,7 @@ public class cauldron_brewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         // Play a sound and particles to indicate successful interaction
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -565,6 +584,13 @@ public class cauldron_brewing {
                 /*
                 Insert Turtle Master in 0.0.5
                  */
+
+                if (ParticleSpawn == true) {
+                    // spawn enchantment particles around the block
+                    ServerWorld serverWorld = (ServerWorld) world;
+                    serverWorld.spawnParticles(ParticleTypes.ENCHANT, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, 50, 0.5, 0.5, 0.5, 0.5);
+
+                }
             }
             return ActionResult.PASS;
         });
