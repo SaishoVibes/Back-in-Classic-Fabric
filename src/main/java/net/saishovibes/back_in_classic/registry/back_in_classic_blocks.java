@@ -49,7 +49,7 @@ public interface back_in_classic_blocks {
     Block SLOWFALL_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "slowfall_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block SPEED_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "speed_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block STRENGTH_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "strength_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block WATER_BREATH_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "water_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block WATER_BREATH_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "water_breathing_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block WEAKNESS_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "weakness_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block TURTLE_MASTER_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "turtle_master_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
 
