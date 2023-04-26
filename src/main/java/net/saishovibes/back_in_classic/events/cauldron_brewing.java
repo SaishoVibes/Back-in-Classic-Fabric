@@ -200,9 +200,21 @@ public class cauldron_brewing {
                         return ActionResult.SUCCESS;
                     }
                 }
-                /*
-                Insert Turtle Master Cauldron Here in 0.0.5
-                 */
+                if (block == back_in_classic_blocks.AWKWARD_CAULDRON) {
+                    ItemStack itemStack = player.getMainHandStack();
+                    if (itemStack.getItem() == Items.TURTLE_HELMET) {
+                        world.setBlockState(blockPos, back_in_classic_blocks.TURTLE_MASTER_CAULDRON.getDefaultState());
+                        if (!player.isCreative()) {
+                            itemStack.decrement(1);
+                        }
+                        // Play a sound and particles to indicate successful interaction
+                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        // Play a sound and particles to indicate successful interaction
+                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        ParticleSpawn = true;
+                        return ActionResult.SUCCESS;
+                    }
+                }
                 if (block == back_in_classic_blocks.AWKWARD_CAULDRON) {
                     ItemStack itemStack = player.getMainHandStack();
                     if (itemStack.getItem() == Items.PHANTOM_MEMBRANE) {
@@ -581,9 +593,27 @@ public class cauldron_brewing {
                         return ActionResult.SUCCESS;
                     }
                 }
-                /*
-                Insert Turtle Master in 0.0.5
-                 */
+                if (block == back_in_classic_blocks.TURTLE_MASTER_CAULDRON) {
+                    ItemStack itemStack = player.getMainHandStack();
+                    if (itemStack.getItem() == Items.GLASS_BOTTLE) {
+                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
+                        if (!player.isCreative()) {
+                            itemStack.decrement(1);
+                        }
+                        // Play a sound and particles to indicate successful interaction
+                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        // Play a sound and particles to indicate successful interaction
+                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
+                        // Drop an Awkward Potion item
+                        // Spawn an awkward potion item entity
+                        ItemStack awkwardPotion = new ItemStack(Items.POTION);
+                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:turtle_master");
+                        ItemEntity itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
+                        itemEntity.setToDefaultPickupDelay();
+                        world.spawnEntity(itemEntity);
+                        return ActionResult.SUCCESS;
+                    }
+                }
 
                 if (ParticleSpawn == true) {
                     // spawn enchantment particles around the block
