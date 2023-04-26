@@ -1,19 +1,25 @@
 # Back-in-Classic-Fabric
 Fabric Port of Back in Classic
 
-This mod requires Fabric API to function
+This mod requires Fabric API or Quilted Fabric API (if using Quilt) to function
 <p>
   <a href="https://modrinth.com/mod/fabric-api" target="_blank">
     <img alt="fabric-api" height="56" src="https://cdn.modrinth.com/data/P7dR8mSH/icon.png">
   </a>
 </p>
+<p>
+  <a href="https://modrinth.com/mod/qsl" target="_blank">
+    <img alt="quilted-fabric-api" height="56" src="https://cdn-raw.modrinth.com/data/qvIfYCYJ/icon.png">
+  </a>
+</p>
 
 # Currently Implemented Features
-- Wax Block
-- All added blocks, without  most of their features
+- All added blocks, with features returning over the updates
 - All Old Biomes re-added to an extent
 - Cauldron potion brewing!
 - Lang Compatibilities with US, UK, and FR!
+- Nether Reactor Core
+- Dirt Slabs and Grass(Sod) Slabs
 - (More to come upon new releases!)
 
 # What is Back in Classic?
