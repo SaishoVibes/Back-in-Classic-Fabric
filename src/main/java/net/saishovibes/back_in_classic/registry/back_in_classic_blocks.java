@@ -19,7 +19,7 @@ public interface back_in_classic_blocks {
     Block WAX_BLOCK = register(new Identifier(Back_In_Classic.MODID, "wax_block"), new SlimeBlock(FabricBlockSettings.copyOf(Blocks.HONEYCOMB_BLOCK)));
     Block CLASSIC_NETHER_PORTAL = register(new Identifier(Back_In_Classic.MODID, "classic_nether_portal"), new Block(FabricBlockSettings.copyOf(Blocks.HONEYCOMB_BLOCK).luminance(9)));
     Block COGWHEEL = register(new Identifier(Back_In_Classic.MODID, "cogwheel"), new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
-    Block DIRT_SLAB = register(new Identifier(Back_In_Classic.MODID, "dirt_slab"), new SlabBlock(FabricBlockSettings.copyOf(Blocks.PETRIFIED_OAK_SLAB).nonOpaque()));
+    Block DIRT_SLAB = register(new Identifier(Back_In_Classic.MODID, "dirt_slab"), new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT).nonOpaque()));
     Block GEAR = register(new Identifier(Back_In_Classic.MODID, "gear"), new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_WIRE).nonOpaque()));
     Block GLOWING_OBSIDIAN = register(new Identifier(Back_In_Classic.MODID, "glowing_obsidian"), new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).luminance(10)));
     Block INF_LAVA = register(new Identifier(Back_In_Classic.MODID, "infinite_lava"), new Block(FabricBlockSettings.copyOf(Blocks.LAVA).nonOpaque()));
@@ -27,7 +27,7 @@ public interface back_in_classic_blocks {
     Block REV_GEAR = register(new Identifier(Back_In_Classic.MODID, "inverse_gear"), new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_WIRE).nonOpaque()));
     Block NETHER_REACTOR = register(new Identifier(Back_In_Classic.MODID, "nether_reactor_core"), new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).luminance(12)));
     Block SOD_BLOCK = register(new Identifier(Back_In_Classic.MODID, "sod_block"), new Block(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK)));
-    Block SOD_SLAB = register(new Identifier(Back_In_Classic.MODID, "sod_slab"), new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).nonOpaque()));
+    Block SOD_SLAB = register(new Identifier(Back_In_Classic.MODID, "sod_slab"), new SlabBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).nonOpaque()));
     Block CRUSHED_GRAVEL = register(new Identifier(Back_In_Classic.MODID, "crushed_gravel"), new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
 
     //PLANTS

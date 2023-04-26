@@ -58,5 +58,9 @@
   "block.back_in_classic.gear": "Engrenage",
   "block.back_in_classic.inverse_gear": "Engrenage Inversé",
   "block.back_in_classic.wax_block": "Bloc de Cire",
-  "block.back_in_classic.sod_block": "Bloc de Gazon"
+  "block.back_in_classic.sod_block": "Bloc de Gazon",
+  "itemGroup.back_in_classic.bic_group": "Retour au Classique",
+  "biome.back_in_classic.rainy_forest": "Forêt Tropicale",
+  "block.back_in_classic.blue_rose_flower": "Rose bleue",
+  "block.back_in_classic.rose_flower": "Rose Rouge"
 }

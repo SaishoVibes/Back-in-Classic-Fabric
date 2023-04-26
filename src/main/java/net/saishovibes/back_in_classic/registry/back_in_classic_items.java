@@ -1,5 +1,6 @@
 package net.saishovibes.back_in_classic.registry;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 
@@ -13,6 +14,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static net.saishovibes.back_in_classic.Back_In_Classic.BACKINCLASSIC_GROUP;
 import static net.saishovibes.back_in_classic.Back_In_Classic.MODID;
 import static net.saishovibes.back_in_classic.registry.back_in_classic_blocks.*;
 
@@ -32,7 +35,7 @@ public interface back_in_classic_items {
     Item NETHER_REACTOR_ITEM = register(new Identifier(Back_In_Classic.MODID, "nether_reactor_core"), new BlockItem(NETHER_REACTOR, new FabricItemSettings()));
     Item SOD_BLOCK_ITEM = register(new Identifier(Back_In_Classic.MODID, "sod_block"), new BlockItem(SOD_BLOCK, new FabricItemSettings()));
     Item SOD_SLAB_ITEM = register(new Identifier(Back_In_Classic.MODID, "sod_slab"), new BlockItem(SOD_SLAB, new FabricItemSettings()));
-    Item CRUSHED_GRAVEL_item = register(new Identifier(Back_In_Classic.MODID, "crushed_gravel"), new BlockItem(CRUSHED_GRAVEL, new FabricItemSettings()));
+    Item CRUSHED_GRAVEL_ITEM = register(new Identifier(Back_In_Classic.MODID, "crushed_gravel"), new BlockItem(CRUSHED_GRAVEL, new FabricItemSettings()));
 
     //PLANTS
     Item BLUE_ROSE_ITEM = register(new Identifier(Back_In_Classic.MODID, "blue_rose"), new BlockItem(BLUE_ROSE, new FabricItemSettings()));
@@ -70,5 +73,19 @@ public interface back_in_classic_items {
     }
     static void init() {
         ITEMS.forEach((id, entry) -> Registry.register(Registries.ITEM, id, entry));
+        ItemGroupEvents.modifyEntriesEvent(BACKINCLASSIC_GROUP).register(content -> {
+            content.add(WAX_BLOCK_ITEM);
+            content.add(DIRT_SLAB_ITEM);
+            content.add(GLOWING_OBSIDIAN_ITEM);
+            content.add(NETHER_REACTOR_ITEM);
+            content.add(SOD_BLOCK_ITEM);
+            content.add(SOD_SLAB_ITEM);
+            content.add(CRUSHED_GRAVEL_ITEM);
+            content.add(BLUE_ROSE_ITEM);
+            content.add(RED_ROSE_ITEM);
+            content.add(SHRUB_ITEM);
+            content.add(PAEONIA_ITEM);
+        });
     }
+
 }
