@@ -1,5 +1,6 @@
 package net.saishovibes.back_in_classic.registry;
 
+import net.minecraft.item.PickaxeItem;
 import net.saishovibes.back_in_classic.Back_In_Classic;
 import net.minecraft.registry.Registry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -36,7 +37,7 @@ public interface back_in_classic_blocks {
     Block SHRUB = register(new Identifier(Back_In_Classic.MODID, "shrub"), new PlantBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH).nonOpaque()));
 
     //CAULDRONS
-    Block AWKWARD_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "awkward_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block AWKWARD_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "awkward_cauldron"), new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).nonOpaque().requiresTool()));
     Block FIRE_RES_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "fire_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block HARM_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "harm_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
     Block HEAL_CAULDRON = register(new Identifier(Back_In_Classic.MODID, "heal_cauldron"), new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));

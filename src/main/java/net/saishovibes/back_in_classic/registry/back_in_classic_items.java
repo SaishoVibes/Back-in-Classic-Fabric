@@ -42,6 +42,21 @@ public interface back_in_classic_items {
 
     //CAULDRONS
     Item AWK_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "awkward_cauldron"), new BlockItem(AWKWARD_CAULDRON, new FabricItemSettings()));
+    Item FIR_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "fire_cauldron"), new BlockItem(FIRE_RES_CAULDRON, new FabricItemSettings()));
+    Item HAR_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "harm_cauldron"), new BlockItem(HARM_CAULDRON, new FabricItemSettings()));
+    Item HEA_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "heal_cauldron"), new BlockItem(HEAL_CAULDRON, new FabricItemSettings()));
+    Item INV_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "invis_cauldron"), new BlockItem(INVIS_CAULDRON, new FabricItemSettings()));
+    Item JMP_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "jump_cauldron"), new BlockItem(JUMP_CAULDRON, new FabricItemSettings()));
+    Item NVI_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "night_cauldron"), new BlockItem(NIGHT_VIS_CAULDRON, new FabricItemSettings()));
+    Item POI_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "poison_cauldron"), new BlockItem(POISON_CAULDRON, new FabricItemSettings()));
+    Item REG_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "regen_cauldron"), new BlockItem(REGEN_CAULDRON, new FabricItemSettings()));
+    Item SLO_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "slow_cauldron"), new BlockItem(SLOW_CAULDRON, new FabricItemSettings()));
+    Item SFA_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "slowfall_cauldron"), new BlockItem(SLOWFALL_CAULDRON, new FabricItemSettings()));
+    Item SPE_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "speed_cauldron"), new BlockItem(SPEED_CAULDRON, new FabricItemSettings()));
+    Item STR_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "strength_cauldron"), new BlockItem(STRENGTH_CAULDRON, new FabricItemSettings()));
+    Item WBR_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "water_breathing_cauldron"), new BlockItem(WATER_BREATH_CAULDRON, new FabricItemSettings()));
+    Item WEA_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "weakness_cauldron"), new BlockItem(WEAKNESS_CAULDRON, new FabricItemSettings()));
+    Item TUR_CAULDRON_ITEM = register(new Identifier(Back_In_Classic.MODID, "turtle_master_cauldron"), new BlockItem(TURTLE_MASTER_CAULDRON, new FabricItemSettings()));
 
     //ARMOR
     //ArmorMaterial PlateArmorMaterial = new PlateArmorMaterial();

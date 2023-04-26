@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "back_in_classic:awkward_cauldron",
+    "back_in_classic:fire_cauldron",
+    "back_in_classic:harm_cauldron",
+    "back_in_classic:heal_cauldron",
+    "back_in_classic:invis_cauldron",
+    "back_in_classic:jump_cauldron",
+    "back_in_classic:night_cauldron",
+    "back_in_classic:poison_cauldron",
+    "back_in_classic:regen_cauldron",
+    "back_in_classic:slow_cauldron",
+    "back_in_classic:slowfall_cauldron",
+    "back_in_classic:speed_cauldron",
+    "back_in_classic:strength_cauldron",
+    "back_in_classic:turtle_master_cauldron",
+    "back_in_classic:water_breathing_cauldron",
+    "back_in_classic:weakness_cauldron",
+    "back_in_classic:nether_reactor_core",
+    "back_in_classic:glowing_obsidian",
+    "back_in_classic:cogwheel",
+    "back_in_classic:gear",
+    "back_in_classic:inverse_gear"
+  ]
+}

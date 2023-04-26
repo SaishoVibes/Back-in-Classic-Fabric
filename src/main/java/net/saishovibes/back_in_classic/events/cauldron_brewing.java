@@ -275,6 +275,13 @@ public class cauldron_brewing {
                         return ActionResult.SUCCESS;
                     }
                 }
+
+                if (ParticleSpawn == true) {
+                    // spawn enchantment particles around the block
+                    ServerWorld serverWorld = (ServerWorld) world;
+                    serverWorld.spawnParticles(ParticleTypes.ENCHANT, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, 50, 0.5, 0.5, 0.5, 0.5);
+                    world.addParticle(ParticleTypes.ENCHANT, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, 50, 0.5, 0.5);
+                }
                 //
                 //COLLECTING POTIONS
                 //
@@ -613,13 +620,6 @@ public class cauldron_brewing {
                         world.spawnEntity(itemEntity);
                         return ActionResult.SUCCESS;
                     }
-                }
-
-                if (ParticleSpawn == true) {
-                    // spawn enchantment particles around the block
-                    ServerWorld serverWorld = (ServerWorld) world;
-                    serverWorld.spawnParticles(ParticleTypes.ENCHANT, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, 50, 0.5, 0.5, 0.5, 0.5);
-
                 }
             }
             return ActionResult.PASS;
