@@ -1,0 +1,27 @@
+{
+  "group": "back_in_classic",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "010",
+    "232",
+    "010"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:gold_block"
+    },
+    "1": {
+      "item": "minecraft:ancient_debris"
+    },
+    "2": {
+      "item": "minecraft:gilded_blackstone"
+    },
+    "3": {
+      "item": "minecraft:respawn_anchor"
+    }
+  },
+  "result": {
+    "item": "back_in_classic:nether_reactor_core",
+    "count": 1
+  }
+}
