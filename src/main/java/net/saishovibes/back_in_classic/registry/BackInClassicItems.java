@@ -1,89 +1,31 @@
 package net.saishovibes.back_in_classic.registry;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.*;
-
-import net.saishovibes.back_in_classic.BackInClassic;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-//import net.saishovibes.back_in_classic.item.PlateArmorMaterial;
-//temp 3845946
+import net.saishovibes.back_in_classic.BackInClassic;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static net.saishovibes.back_in_classic.BackInClassic.BACKINCLASSIC_GROUP;
-import static net.saishovibes.back_in_classic.registry.BackInClassicBlocks.*;
-
 public interface BackInClassicItems {
     Map<Identifier, Item> ITEMS = new LinkedHashMap<>();
-
-    //BLOCKS
-    Item WAX_BLOCK_ITEM = register(BackInClassic.id("wax_block"), new BlockItem(WAX_BLOCK, new FabricItemSettings()));
-    Item CLASSIC_PORTAL_ITEM = register(BackInClassic.id("classic_nether_portal"), new BlockItem(CLASSIC_NETHER_PORTAL, new FabricItemSettings()));
-    Item COGWHEEL_ITEM = register(BackInClassic.id("cogwheel"), new BlockItem(COGWHEEL, new FabricItemSettings()));
-    Item DIRT_SLAB_ITEM = register(BackInClassic.id("dirt_slab"), new BlockItem(DIRT_SLAB, new FabricItemSettings()));
-    Item GEAR_ITEM = register(BackInClassic.id("gear"), new BlockItem(GEAR, new FabricItemSettings()));
-    Item GLOWING_OBSIDIAN_ITEM = register(BackInClassic.id("glowing_obsidian"), new BlockItem(GLOWING_OBSIDIAN, new FabricItemSettings()));
-    Item INF_LAVA_ITEM = register(BackInClassic.id("infinite_lava"), new BlockItem(INF_LAVA, new FabricItemSettings()));
-    Item INF_WATER_ITEM = register(BackInClassic.id("infinite_water"), new BlockItem(INF_WATER, new FabricItemSettings()));
-    Item REV_GEAR_ITEM = register(BackInClassic.id("inverse_gear"), new BlockItem(REV_GEAR, new FabricItemSettings()));
-    Item NETHER_REACTOR_ITEM = register(BackInClassic.id("nether_reactor_core"), new BlockItem(NETHER_REACTOR, new FabricItemSettings()));
-    Item SOD_BLOCK_ITEM = register(BackInClassic.id("sod_block"), new BlockItem(SOD_BLOCK, new FabricItemSettings()));
-    Item SOD_SLAB_ITEM = register(BackInClassic.id("sod_slab"), new BlockItem(SOD_SLAB, new FabricItemSettings()));
-    Item CRUSHED_GRAVEL_ITEM = register(BackInClassic.id("crushed_gravel"), new BlockItem(CRUSHED_GRAVEL, new FabricItemSettings()));
-
-    //PLANTS
-    Item BLUE_ROSE_ITEM = register(BackInClassic.id("blue_rose"), new BlockItem(BLUE_ROSE, new FabricItemSettings()));
-    Item RED_ROSE_ITEM = register(BackInClassic.id("red_rose"), new BlockItem(RED_ROSE, new FabricItemSettings()));
-    Item PAEONIA_ITEM = register(BackInClassic.id("paeonia_flower"), new BlockItem(PAEONIA, new FabricItemSettings()));
-    Item SHRUB_ITEM = register(BackInClassic.id("shrub"), new BlockItem(SHRUB, new FabricItemSettings()));
-
-    //CAULDRONS
-    Item AWK_CAULDRON_ITEM = register(BackInClassic.id("awkward_cauldron"), new BlockItem(AWKWARD_CAULDRON, new FabricItemSettings()));
-    Item FIR_CAULDRON_ITEM = register(BackInClassic.id("fire_cauldron"), new BlockItem(FIRE_RES_CAULDRON, new FabricItemSettings()));
-    Item HAR_CAULDRON_ITEM = register(BackInClassic.id("harm_cauldron"), new BlockItem(HARM_CAULDRON, new FabricItemSettings()));
-    Item HEA_CAULDRON_ITEM = register(BackInClassic.id("heal_cauldron"), new BlockItem(HEAL_CAULDRON, new FabricItemSettings()));
-    Item INV_CAULDRON_ITEM = register(BackInClassic.id("invis_cauldron"), new BlockItem(INVIS_CAULDRON, new FabricItemSettings()));
-    Item JMP_CAULDRON_ITEM = register(BackInClassic.id("jump_cauldron"), new BlockItem(JUMP_CAULDRON, new FabricItemSettings()));
-    Item NVI_CAULDRON_ITEM = register(BackInClassic.id("night_cauldron"), new BlockItem(NIGHT_VIS_CAULDRON, new FabricItemSettings()));
-    Item POI_CAULDRON_ITEM = register(BackInClassic.id("poison_cauldron"), new BlockItem(POISON_CAULDRON, new FabricItemSettings()));
-    Item REG_CAULDRON_ITEM = register(BackInClassic.id("regen_cauldron"), new BlockItem(REGEN_CAULDRON, new FabricItemSettings()));
-    Item SLO_CAULDRON_ITEM = register(BackInClassic.id("slow_cauldron"), new BlockItem(SLOW_CAULDRON, new FabricItemSettings()));
-    Item SFA_CAULDRON_ITEM = register(BackInClassic.id("slowfall_cauldron"), new BlockItem(SLOWFALL_CAULDRON, new FabricItemSettings()));
-    Item SPE_CAULDRON_ITEM = register(BackInClassic.id("speed_cauldron"), new BlockItem(SPEED_CAULDRON, new FabricItemSettings()));
-    Item STR_CAULDRON_ITEM = register(BackInClassic.id("strength_cauldron"), new BlockItem(STRENGTH_CAULDRON, new FabricItemSettings()));
-    Item WBR_CAULDRON_ITEM = register(BackInClassic.id("water_breathing_cauldron"), new BlockItem(WATER_BREATH_CAULDRON, new FabricItemSettings()));
-    Item WEA_CAULDRON_ITEM = register(BackInClassic.id("weakness_cauldron"), new BlockItem(WEAKNESS_CAULDRON, new FabricItemSettings()));
-    Item TUR_CAULDRON_ITEM = register(BackInClassic.id("turtle_master_cauldron"), new BlockItem(TURTLE_MASTER_CAULDRON, new FabricItemSettings()));
-
-    //ARMOR
-    //ArmorMaterial PlateArmorMaterial = new PlateArmorMaterial();
-    //ArmorItem PLATE_HELMET = register(new Identifier(MODID, "plate_helmet"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.HEAD, new Item.Settings()));
-    //ArmorItem PLATE_CHESTPLATE = register(new Identifier(MODID, "plate_chestplate"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.CHEST, new Item.Settings()));
-    //ArmorItem PLATE_LEGGINGS = register(new Identifier(MODID, "plate_leggings"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.LEGS, new Item.Settings()));
-    //ArmorItem PLATE_BOOTS = register(new Identifier(MODID, "plate_boots"), new ArmorItem(PlateArmorMaterial, EquipmentSlot.FEET, new Item.Settings()));
-    static <T extends Item> T register(Identifier id, T entry) {
-        ITEMS.put(id, entry);
-        return entry;
-    }
+    ItemGroup BACKINCLASSIC_GROUP = FabricItemGroup.builder(BackInClassic.id("bic_group")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).build();
 
     static void init() {
-        ITEMS.forEach((id, entry) -> Registry.register(Registries.ITEM, id, entry));
-        ItemGroupEvents.modifyEntriesEvent(BACKINCLASSIC_GROUP).register(content -> {
-            content.add(WAX_BLOCK_ITEM);
-            content.add(DIRT_SLAB_ITEM);
-            content.add(GLOWING_OBSIDIAN_ITEM);
-            content.add(NETHER_REACTOR_ITEM);
-            content.add(SOD_BLOCK_ITEM);
-            content.add(SOD_SLAB_ITEM);
-            content.add(CRUSHED_GRAVEL_ITEM);
-            content.add(BLUE_ROSE_ITEM);
-            content.add(RED_ROSE_ITEM);
-            content.add(SHRUB_ITEM);
-            content.add(PAEONIA_ITEM);
+        ITEMS.forEach((id, item) -> {
+            Registry.register(Registries.ITEM, id, item);
+            ItemGroupEvents.modifyEntriesEvent(BACKINCLASSIC_GROUP).register(content -> content.add(item));
         });
+    }
+
+    static <T extends Item> T createItem(String name, T item) {
+        ITEMS.put(BackInClassic.id(name), item);
+        return item;
     }
 }

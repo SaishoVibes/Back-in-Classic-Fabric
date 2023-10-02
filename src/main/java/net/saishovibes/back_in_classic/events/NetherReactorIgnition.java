@@ -1,18 +1,18 @@
 package net.saishovibes.back_in_classic.events;
 
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.random.*;
-import net.minecraft.world.World;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.saishovibes.back_in_classic.registry.BackInClassicBlocks;
 
 public class NetherReactorIgnition {
@@ -45,15 +45,14 @@ public class NetherReactorIgnition {
                                 block(world, pos.add(0, 1, -1), Blocks.COBBLESTONE.getDefaultState()) &&
                                 block(world, pos.add(1, 1, 0), Blocks.COBBLESTONE.getDefaultState())) {
                             removeBlocks(world, pos);
-                            //world.setBlockState(aboveBarrierSet, Blocks.BARRIER.getDefaultState());
                             if (!player.isCreative()) {
                                 itemStack.use(world, player, hand);
                                 itemStack.damage(1, player, playerEntity -> {});
                             }
                             world.playSound(null, pos, SoundEvents.ENTITY_WITHER_SPAWN, SoundCategory.MASTER, 1.0f, 1.0f);
-                            ReactorPhase2.runScheduled(world, pos, 8000);
-                            ReactorPhase3.runScheduled(world, pos, 16000);
-                            ReactorPhase4.runScheduled(world, pos, 24000);
+                            ReactorTask.runScheduled(() -> NetherReactorIgnition.setSpawner(world, pos, EntityType.BLAZE), 8000);
+                            ReactorTask.runScheduled(() -> NetherReactorIgnition.setSpawner(world, pos, EntityType.PIGLIN_BRUTE), 16000);
+                            ReactorTask.runScheduled(() -> NetherReactorIgnition.spawnerShutdown(world, pos), 24000);
                             return ActionResult.SUCCESS;
                         }
                     }
@@ -87,61 +86,21 @@ public class NetherReactorIgnition {
                         world.setBlockState(blockPos, obsidian);
                     }
                     if (world.getBlockState(blockPos).getBlock() == BackInClassicBlocks.NETHER_REACTOR) {
-                        setPiglinSpawner(world, pos);
+                        setSpawner(world, pos, EntityType.PIGLIN);
                     }
                 }
             }
         }
     }
 
-    public static void setPiglinSpawner(World world, BlockPos pos) {
+    public static void setSpawner(World world, BlockPos pos, EntityType<?> entityType) {
         var spawnerState = Blocks.SPAWNER.getDefaultState();
-        world.setBlockState(pos, Blocks.ANCIENT_DEBRIS.getDefaultState());
         world.setBlockState(pos, spawnerState);
-
         var blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof MobSpawnerBlockEntity) {
+        if (blockEntity instanceof MobSpawnerBlockEntity spawnerBlock) {
             var state = Blocks.SPAWNER.getDefaultState();
             world.setBlockState(pos, state);
-            MobSpawnerBlockEntity spawnerEntity = (MobSpawnerBlockEntity) blockEntity;
-            var mobSpawnerLogic = ((MobSpawnerBlockEntity) blockEntity).getLogic();
-            var randNum = Random.create(world.getTimeOfDay());
-            mobSpawnerLogic.setEntityId(EntityType.ZOMBIFIED_PIGLIN, world, randNum, pos);
-            blockEntity.markDirty();
-            world.updateListeners(pos, state, state, 3);
-        }
-    }
-
-    public static void setBruteSpawner(World world, BlockPos pos) {
-        var spawnerState = Blocks.SPAWNER.getDefaultState();
-        //world.setBlockState(pos, Blocks.ANCIENT_DEBRIS.getDefaultState());
-        world.setBlockState(pos, spawnerState);
-
-        var blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof MobSpawnerBlockEntity) {
-            var state = Blocks.SPAWNER.getDefaultState();
-            world.setBlockState(pos, state);
-            MobSpawnerBlockEntity spawnerEntity = (MobSpawnerBlockEntity) blockEntity;
-            var mobSpawnerLogic = ((MobSpawnerBlockEntity) blockEntity).getLogic();
-            Random randNum = new ThreadSafeRandom(world.getTimeOfDay());
-            mobSpawnerLogic.setEntityId(EntityType.PIGLIN_BRUTE, world, randNum, pos);
-            blockEntity.markDirty();
-            world.updateListeners(pos, state, state, 3);
-        }
-    }
-
-    public static void setBlazeSpawner(World world, BlockPos pos) {
-        var spawnerState = Blocks.SPAWNER.getDefaultState();
-        //world.setBlockState(pos, Blocks.ANCIENT_DEBRIS.getDefaultState());
-        world.setBlockState(pos, spawnerState);
-
-        var blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof MobSpawnerBlockEntity) {
-            var state = Blocks.SPAWNER.getDefaultState();
-            world.setBlockState(pos, state);
-            var mobSpawnerLogic = ((MobSpawnerBlockEntity)blockEntity).getLogic();
-            Random randNum = new ThreadSafeRandom(world.getTimeOfDay());
-            mobSpawnerLogic.setEntityId(EntityType.BLAZE, world, randNum, pos);
+            spawnerBlock.getLogic().setEntityId(entityType, world, world.random, pos);
             blockEntity.markDirty();
             world.updateListeners(pos, state, state, 3);
         }
