@@ -84,202 +84,43 @@ public class CauldronBrewing {
 
 
                 if (itemStack.getItem() == Items.GLASS_BOTTLE) {
+                    String potion = null;
+
                     if (block == BackInClassicBlocks.AWKWARD_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:awkward");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:awkward";
                     } else if (block == BackInClassicBlocks.NIGHT_VIS_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:night_vision");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:night_vision";
                     } else if (block == BackInClassicBlocks.SPEED_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:swiftness");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:swiftness";
                     } else if (block == BackInClassicBlocks.JUMP_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:leaping");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:leaping";
                     } else if (block == BackInClassicBlocks.FIRE_RES_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:fire_resistance");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:fire_resistance";
                     } else if (block == BackInClassicBlocks.POISON_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:poison");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:poison";
                     } else if (block == BackInClassicBlocks.HEAL_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:healing");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:healing";
                     } else if (block == BackInClassicBlocks.HARM_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:harming");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:harming";
                     } else if (block == BackInClassicBlocks.INVIS_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:invisibility");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:invisibility";
                     } else if (block == BackInClassicBlocks.WATER_BREATH_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:water_breathing");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:water_breathing";
                     } else if (block == BackInClassicBlocks.SLOW_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:slowness");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:slowness";
                     } else if (block == BackInClassicBlocks.SLOWFALL_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:slow_falling");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:slow_falling";
                     } else if (block == BackInClassicBlocks.WEAKNESS_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:weakness");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:weakness";
                     } else if (block == BackInClassicBlocks.STRENGTH_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:strength");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:strength";
                     } else if (block == BackInClassicBlocks.REGEN_CAULDRON) {
-                        world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
-                        if (!player.isCreative()) {
-                            itemStack.decrement(1);
-                        }
-                        world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                        var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:regeneration");
-                        var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
-                        itemEntity.setToDefaultPickupDelay();
-                        world.spawnEntity(itemEntity);
-                        return ActionResult.SUCCESS;
+                        potion = "minecraft:regeneration";
                     } else if (block == BackInClassicBlocks.TURTLE_MASTER_CAULDRON) {
+                        potion = "minecraft:turtle_master";
+                    }
+
+                    if (potion != null) {
                         world.setBlockState(blockPos, Blocks.CAULDRON.getDefaultState());
                         if (!player.isCreative()) {
                             itemStack.decrement(1);
@@ -287,7 +128,7 @@ public class CauldronBrewing {
                         world.playSound(null, blockPos, SoundEvents.BLOCK_BREWING_STAND_BREW, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
                         var awkwardPotion = new ItemStack(Items.POTION);
-                        awkwardPotion.getOrCreateNbt().putString("Potion", "minecraft:turtle_master");
+                        awkwardPotion.getOrCreateNbt().putString("Potion", potion);
                         var itemEntity = new ItemEntity(world, blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5, awkwardPotion);
                         itemEntity.setToDefaultPickupDelay();
                         world.spawnEntity(itemEntity);
