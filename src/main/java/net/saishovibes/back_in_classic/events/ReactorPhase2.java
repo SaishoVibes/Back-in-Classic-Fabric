@@ -6,12 +6,12 @@ import net.minecraft.world.World;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class reactor_phase_2 extends TimerTask {
+public class ReactorPhase2 extends TimerTask {
 
     private final BlockPos pos;
     private final World world;
 
-    public reactor_phase_2(World world, BlockPos pos) {
+    public ReactorPhase2(World world, BlockPos pos) {
         this.pos = pos;
         this.world = world;
     }
@@ -19,10 +19,10 @@ public class reactor_phase_2 extends TimerTask {
     @Override
     public void run() {
         //Execute your task
-        nether_reactor_ignition.set_blaze_spawner(world, pos);
+        NetherReactorIgnition.setBlazeSpawner(world, pos);
     }
 
     public static void runScheduled(World world, BlockPos pos, long delayInMillis) {
-        new Timer().schedule(new reactor_phase_2(world, pos), delayInMillis);
+        new Timer().schedule(new ReactorPhase2(world, pos), delayInMillis);
     }
 }

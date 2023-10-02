@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.saishovibes.back_in_classic.Back_In_Classic"
+      "net.saishovibes.back_in_classic.BackInClassic"
     ],
     "client": [
-      "net.saishovibes.back_in_classic.Back_In_Classic_Client"
+      "net.saishovibes.back_in_classic.BackInClassicClient"
     ]
   },
 
