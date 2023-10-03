@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "id": "back_in_classic",
   "version": "0.0.6",
+  "accessWidener" : "backinclassic.accesswidener",
 
   "name": "Back in Classic",
   "description": "Bringing back Classic Features with new functions!",
@@ -19,10 +20,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.saishovibes.back_in_classic.Back_In_Classic"
+      "net.saishovibes.backinclassic.BackInClassic"
     ],
     "client": [
-      "net.saishovibes.back_in_classic.Back_In_Classic_Client"
+      "net.saishovibes.backinclassic.BackInClassicClient"
     ]
   },
 
