@@ -1,13 +1,20 @@
-package net.saishovibes.back_in_classic.registry;
+package net.saishovibes.backinclassic.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.BlockItem;
-import net.saishovibes.back_in_classic.BackInClassic;
-import net.minecraft.registry.Registry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.util.Identifier;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.SlimeBlock;
+import net.minecraft.item.BlockItem;
+import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import net.saishovibes.backinclassic.BackInClassic;
+import net.saishovibes.backinclassic.blocks.PotionCauldronBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.LinkedHashMap;
@@ -36,22 +43,22 @@ public interface BackInClassicBlocks {
     Block RED_ROSE = createBlock("red_rose", new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY).nonOpaque()));
     Block SHRUB = createBlock("shrub", new PlantBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH).nonOpaque()));
 
-    Block AWKWARD_CAULDRON = createBlock("awkward_cauldron", new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).nonOpaque().requiresTool()));
-    Block FIRE_RES_CAULDRON = createBlock("fire_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block HARM_CAULDRON = createBlock("harm_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block HEAL_CAULDRON = createBlock("heal_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block INVIS_CAULDRON = createBlock("invis_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block JUMP_CAULDRON = createBlock("jump_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block NIGHT_VIS_CAULDRON = createBlock("night_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block POISON_CAULDRON = createBlock("poison_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block REGEN_CAULDRON = createBlock("regen_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block SLOW_CAULDRON = createBlock("slow_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block SLOWFALL_CAULDRON = createBlock("slowfall_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block SPEED_CAULDRON = createBlock("speed_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block STRENGTH_CAULDRON = createBlock("strength_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block WATER_BREATH_CAULDRON = createBlock("water_breathing_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block WEAKNESS_CAULDRON = createBlock("weakness_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
-    Block TURTLE_MASTER_CAULDRON = createBlock("turtle_master_cauldron", new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON).nonOpaque()));
+    Block AWKWARD_CAULDRON = createBlock("awkward_cauldron", PotionCauldronBlock.of(Potions.AWKWARD));
+    Block FIRE_RES_CAULDRON = createBlock("fire_cauldron", PotionCauldronBlock.of(Potions.FIRE_RESISTANCE));
+    Block HARM_CAULDRON = createBlock("harm_cauldron", PotionCauldronBlock.of(Potions.HARMING));
+    Block HEAL_CAULDRON = createBlock("heal_cauldron", PotionCauldronBlock.of(Potions.HEALING));
+    Block INVIS_CAULDRON = createBlock("invis_cauldron", PotionCauldronBlock.of(Potions.INVISIBILITY));
+    Block JUMP_CAULDRON = createBlock("jump_cauldron", PotionCauldronBlock.of(Potions.LEAPING));
+    Block NIGHT_VIS_CAULDRON = createBlock("night_cauldron", PotionCauldronBlock.of(Potions.NIGHT_VISION));
+    Block POISON_CAULDRON = createBlock("poison_cauldron", PotionCauldronBlock.of(Potions.POISON));
+    Block REGEN_CAULDRON = createBlock("regen_cauldron", PotionCauldronBlock.of(Potions.REGENERATION));
+    Block SLOW_CAULDRON = createBlock("slow_cauldron", PotionCauldronBlock.of(Potions.SLOWNESS));
+    Block SLOWFALL_CAULDRON = createBlock("slowfall_cauldron", PotionCauldronBlock.of(Potions.SLOW_FALLING));
+    Block SPEED_CAULDRON = createBlock("speed_cauldron", PotionCauldronBlock.of(Potions.SWIFTNESS));
+    Block STRENGTH_CAULDRON = createBlock("strength_cauldron", PotionCauldronBlock.of(Potions.STRENGTH));
+    Block WATER_BREATH_CAULDRON = createBlock("water_breathing_cauldron", PotionCauldronBlock.of(Potions.WATER_BREATHING));
+    Block WEAKNESS_CAULDRON = createBlock("weakness_cauldron", PotionCauldronBlock.of(Potions.WEAKNESS));
+    Block TURTLE_MASTER_CAULDRON = createBlock("turtle_master_cauldron", PotionCauldronBlock.of(Potions.TURTLE_MASTER));
 
     static Block createBlock(String name, Block block) {
         return createBlock(name, block, new BlockItem(block, new FabricItemSettings()));

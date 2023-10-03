@@ -1,12 +1,12 @@
-package net.saishovibes.back_in_classic;
+package net.saishovibes.backinclassic;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.util.Identifier;
-import net.saishovibes.back_in_classic.events.CauldronBrewing;
-import net.saishovibes.back_in_classic.events.NetherReactorIgnition;
-import net.saishovibes.back_in_classic.registry.BackInClassicBlocks;
-import net.saishovibes.back_in_classic.registry.BackInClassicItems;
-import org.jetbrains.annotations.Contract;
+import net.saishovibes.backinclassic.events.CauldronBrewing;
+import net.saishovibes.backinclassic.events.NetherReactorIgnition;
+import net.saishovibes.backinclassic.registry.BackInClassicBlocks;
+import net.saishovibes.backinclassic.registry.BackInClassicItems;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,8 +19,8 @@ public class BackInClassic implements ModInitializer {
     public void onInitialize() {
         BackInClassicBlocks.init();
         BackInClassicItems.init();
-        CauldronBrewing.initialize();
-        NetherReactorIgnition.activate();
+        UseBlockCallback.EVENT.register(CauldronBrewing::interact);
+        UseBlockCallback.EVENT.register(NetherReactorIgnition::interact);
         LOGGER.info("Back in Classic Mod Initialized!");
     }
 

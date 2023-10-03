@@ -1,9 +1,9 @@
-package net.saishovibes.back_in_classic;
+package net.saishovibes.backinclassic;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
-import net.saishovibes.back_in_classic.registry.BackInClassicBlocks;
+import net.saishovibes.backinclassic.registry.BackInClassicBlocks;
 
 public class BackInClassicClient implements ClientModInitializer {
     public void onInitializeClient() {
