@@ -25,8 +25,9 @@ public interface BackInClassicBlocks {
     Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
     Block WAX_BLOCK = createBlock("wax_block", new SlimeBlock(FabricBlockSettings.copyOf(Blocks.HONEYCOMB_BLOCK)));
-    Block CLASSIC_NETHER_PORTAL = createBlock("classic_nether_portal", new Block(FabricBlockSettings.copyOf(Blocks.HONEYCOMB_BLOCK).luminance(9)));
+    Block CLASSIC_NETHER_PORTAL = createBlock("classic_nether_portal", new Block(FabricBlockSettings.copyOf(Blocks.NETHER_PORTAL).luminance(9)));
     Block COGWHEEL = createBlock("cogwheel", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
+    Block DEBUG_BLOCK = createBlock("debug_block", new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
     Block DIRT_SLAB = createBlock("dirt_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT).nonOpaque()));
     Block GEAR = createBlock("gear", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_WIRE).nonOpaque()));
     Block GLOWING_OBSIDIAN = createBlock("glowing_obsidian", new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).luminance(10)));
