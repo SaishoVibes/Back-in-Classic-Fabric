@@ -186,11 +186,11 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:forest_flowers",
       "minecraft:trees_sparse_jungle",
       "minecraft:trees_birch_and_oak",
-      "minecraft:flower_default",
       "minecraft:flower_warm",
+      "back_in_classic:rose_red",
+      "back_in_classic:roses_placed",
       "minecraft:patch_grass_jungle",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",

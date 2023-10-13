@@ -198,7 +198,8 @@
       "minecraft:spring_lava_frozen"
     ],
     [
-      "minecraft:glow_lichen"
+      "minecraft:glow_lichen",
+      "back_in_classic:rose_blue"
     ],
     [
       "minecraft:freeze_top_layer"

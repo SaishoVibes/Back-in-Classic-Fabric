@@ -2,12 +2,10 @@ package net.saishovibes.backinclassic.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.block.PlantBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.SlimeBlock;
+import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
@@ -39,10 +37,10 @@ public interface BackInClassicBlocks {
     Block SOD_SLAB = createBlock("sod_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).nonOpaque()));
     Block CRUSHED_GRAVEL = createBlock("crushed_gravel", new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
 
-    Block BLUE_ROSE = createBlock("blue_rose", new PlantBlock(FabricBlockSettings.copyOf(Blocks.BLUE_ORCHID).nonOpaque()));
-    Block PAEONIA = createBlock("paeonia_flower", new PlantBlock(FabricBlockSettings.copyOf(Blocks.PINK_TULIP).nonOpaque()));
-    Block RED_ROSE = createBlock("red_rose", new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY).nonOpaque()));
-    Block SHRUB = createBlock("shrub", new PlantBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH).nonOpaque()));
+    Block BLUE_ROSE = createBlock("blue_rose", new FlowerBlock(StatusEffects.LUCK, 0, FabricBlockSettings.copyOf(Blocks.BLUE_ORCHID).nonOpaque()));
+    Block PAEONIA = createBlock("paeonia_flower", new FlowerBlock(StatusEffects.NAUSEA, 0, FabricBlockSettings.copyOf(Blocks.PINK_TULIP).nonOpaque()));
+    Block RED_ROSE = createBlock("red_rose", new FlowerBlock(StatusEffects.LUCK, 0, FabricBlockSettings.copyOf(Blocks.POPPY).nonOpaque()));
+    Block SHRUB = createBlock("shrub", new FlowerBlock(StatusEffects.UNLUCK, 0, FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
 
     Block AWKWARD_CAULDRON = createBlock("awkward_cauldron", PotionCauldronBlock.of(Potions.AWKWARD));
     Block FIRE_RES_CAULDRON = createBlock("fire_cauldron", PotionCauldronBlock.of(Potions.FIRE_RESISTANCE));

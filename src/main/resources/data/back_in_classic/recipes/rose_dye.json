@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "back_in_classic:rose_flower"
+      "item": "back_in_classic:red_rose"
     }
   ],
   "result": {
