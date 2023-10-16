@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.saishovibes.backinclassic.BackInClassic;
@@ -21,22 +22,8 @@ import static net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin
 @SuppressWarnings("unused")
 public class BackInClassicItems {
     static Map<Identifier, Item> ITEMS = new LinkedHashMap<>();
-    public static ItemGroup BACKINCLASSIC_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(BackInClassic.MODID, "backinclassic"), FabricItemGroup.builder().displayName(Text.translatable("itemgroup.backinclassic")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).entries((displayContext, entries) -> {
-        entries.add(BackInClassicBlocks.WAX_BLOCK);
-        entries.add(BackInClassicBlocks.SOD_BLOCK);
-        entries.add(BackInClassicBlocks.SOD_SLAB);
-        entries.add(BackInClassicBlocks.DIRT_SLAB);
-        entries.add(BackInClassicBlocks.CRUSHED_GRAVEL);
-        entries.add(BackInClassicBlocks.GLOWING_OBSIDIAN);
-        entries.add(BackInClassicBlocks.RED_ROSE);
-        entries.add(BackInClassicBlocks.BLUE_ROSE);
-        entries.add(BackInClassicBlocks.PAEONIA);
-        entries.add(BackInClassicBlocks.SHRUB);
-        entries.add(BackInClassicBlocks.NETHER_REACTOR);
-        entries.add(BackInClassicBlocks.COGWHEEL);
-        entries.add(BackInClassicBlocks.AWKWARD_CAULDRON);
+    public static RegistryKey<ItemGroup> BACKINCLASSIC_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(BackInClassic.MODID, "backinclassic"));
 
-    }).build());
 
     /*static void init() {
         ITEMS.forEach((id, item) -> {
@@ -63,6 +50,26 @@ public class BackInClassicItems {
             entries.add(BackInClassicBlocks.TURTLE_MASTER_CAULDRON);
             entries.add(BackInClassicBlocks.WATER_BREATH_CAULDRON);
             entries.add(BackInClassicBlocks.WEAKNESS_CAULDRON);
+        });
+        Registry.register(Registries.ITEM_GROUP, BACKINCLASSIC_GROUP, FabricItemGroup.builder().displayName(Text.translatable("back_in_classic.itemgroup")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).entries((displayContext, entries) -> {
+            entries.add(BackInClassicBlocks.WAX_BLOCK);
+            entries.add(BackInClassicBlocks.SOD_BLOCK);
+            entries.add(BackInClassicBlocks.SOD_SLAB);
+            entries.add(BackInClassicBlocks.DIRT_SLAB);
+            entries.add(BackInClassicBlocks.CRUSHED_GRAVEL);
+            entries.add(BackInClassicBlocks.GLOWING_OBSIDIAN);
+            entries.add(BackInClassicBlocks.RED_ROSE);
+            entries.add(BackInClassicBlocks.BLUE_ROSE);
+            entries.add(BackInClassicBlocks.PAEONIA);
+            entries.add(BackInClassicBlocks.SHRUB);
+            entries.add(BackInClassicBlocks.NETHER_REACTOR);
+            entries.add(BackInClassicBlocks.COGWHEEL);
+            entries.add(BackInClassicBlocks.AWKWARD_CAULDRON);
+
+        }).build());
+        ITEMS.forEach((id, item) -> {
+            Registry.register(Registries.ITEM, id, item);
+            ItemGroupEvents.modifyEntriesEvent(BACKINCLASSIC_GROUP).register(content -> content.add(item));
         });
     }
 
