@@ -4,24 +4,65 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.saishovibes.backinclassic.BackInClassic;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@SuppressWarnings("unused")
-public interface BackInClassicItems {
-    Map<Identifier, Item> ITEMS = new LinkedHashMap<>();
-    ItemGroup BACKINCLASSIC_GROUP = FabricItemGroup.builder(BackInClassic.id("bic_group")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).build();
+import static net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin.register;
 
-    static void init() {
+@SuppressWarnings("unused")
+public class BackInClassicItems {
+    static Map<Identifier, Item> ITEMS = new LinkedHashMap<>();
+    public static ItemGroup BACKINCLASSIC_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(BackInClassic.MODID, "backinclassic"), FabricItemGroup.builder().displayName(Text.translatable("itemgroup.backinclassic")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).entries((displayContext, entries) -> {
+        entries.add(BackInClassicBlocks.WAX_BLOCK);
+        entries.add(BackInClassicBlocks.SOD_BLOCK);
+        entries.add(BackInClassicBlocks.SOD_SLAB);
+        entries.add(BackInClassicBlocks.DIRT_SLAB);
+        entries.add(BackInClassicBlocks.CRUSHED_GRAVEL);
+        entries.add(BackInClassicBlocks.GLOWING_OBSIDIAN);
+        entries.add(BackInClassicBlocks.RED_ROSE);
+        entries.add(BackInClassicBlocks.BLUE_ROSE);
+        entries.add(BackInClassicBlocks.PAEONIA);
+        entries.add(BackInClassicBlocks.SHRUB);
+        entries.add(BackInClassicBlocks.NETHER_REACTOR);
+        entries.add(BackInClassicBlocks.COGWHEEL);
+        entries.add(BackInClassicBlocks.AWKWARD_CAULDRON);
+
+    }).build());
+
+    /*static void init() {
         ITEMS.forEach((id, item) -> {
             Registry.register(Registries.ITEM, id, item);
-            ItemGroupEvents.modifyEntriesEvent(BACKINCLASSIC_GROUP).register(content -> content.add(item));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> content.add(item));
+        });
+    }*/
+    public static void RegisterItemGroups() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
+            entries.add(BackInClassicBlocks.INF_WATER);
+            entries.add(BackInClassicBlocks.INF_LAVA);
+            entries.add(BackInClassicBlocks.FIRE_RES_CAULDRON);
+            entries.add(BackInClassicBlocks.HARM_CAULDRON);
+            entries.add(BackInClassicBlocks.HEAL_CAULDRON);
+            entries.add(BackInClassicBlocks.INVIS_CAULDRON);
+            entries.add(BackInClassicBlocks.JUMP_CAULDRON);
+            entries.add(BackInClassicBlocks.POISON_CAULDRON);
+            entries.add(BackInClassicBlocks.NIGHT_VIS_CAULDRON);
+            entries.add(BackInClassicBlocks.REGEN_CAULDRON);
+            entries.add(BackInClassicBlocks.SLOWFALL_CAULDRON);
+            entries.add(BackInClassicBlocks.SLOW_CAULDRON);
+            entries.add(BackInClassicBlocks.SPEED_CAULDRON);
+            entries.add(BackInClassicBlocks.STRENGTH_CAULDRON);
+            entries.add(BackInClassicBlocks.TURTLE_MASTER_CAULDRON);
+            entries.add(BackInClassicBlocks.WATER_BREATH_CAULDRON);
+            entries.add(BackInClassicBlocks.WEAKNESS_CAULDRON);
         });
     }
 
