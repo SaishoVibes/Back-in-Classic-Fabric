@@ -1,5 +1,6 @@
 package net.saishovibes.backinclassic.registry;
 
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -35,7 +36,12 @@ public interface BackInClassicBlocks {
     Block NETHER_REACTOR = createBlock("nether_reactor_core", new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).luminance(12)));
     Block SOD_BLOCK = createBlock("sod_block", new Block(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK)));
     Block SOD_SLAB = createBlock("sod_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).nonOpaque()));
-    Block CRUSHED_GRAVEL = createBlock("crushed_gravel", new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
+    Block CRUSHED_GRAVEL = createBlock("crushed_gravel", new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)) {
+        @Override
+        protected MapCodec<? extends FallingBlock> getCodec() {
+            return null;
+        }
+    });
 
     Block BLUE_ROSE = createBlock("blue_rose", new FlowerBlock(StatusEffects.LUCK, 0, FabricBlockSettings.copyOf(Blocks.BLUE_ORCHID).nonOpaque()));
     Block PAEONIA = createBlock("paeonia_flower", new FlowerBlock(StatusEffects.NAUSEA, 0, FabricBlockSettings.copyOf(Blocks.PINK_TULIP).nonOpaque()));
