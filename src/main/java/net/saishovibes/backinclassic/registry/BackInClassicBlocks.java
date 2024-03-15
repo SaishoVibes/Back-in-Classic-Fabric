@@ -28,7 +28,7 @@ public interface BackInClassicBlocks {
     Block COGWHEEL = createBlock("cogwheel", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
     Block DEBUG_BLOCK = createBlock("debug_block", new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
     Block DIRT_SLAB = createBlock("dirt_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT).nonOpaque()));
-    Block GEAR = createBlock("gear", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_WIRE).nonOpaque()));
+    Block GEAR = createBlock("gear", new Block(FabricBlockSettings.copyOf(Blocks.COBWEB).nonOpaque()));
     Block GLOWING_OBSIDIAN = createBlock("glowing_obsidian", new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).luminance(10)));
     Block INF_LAVA = createBlock("infinite_lava", new Block(FabricBlockSettings.copyOf(Blocks.LAVA).nonOpaque()));
     Block INF_WATER = createBlock("infinite_water", new Block(FabricBlockSettings.copyOf(Blocks.WATER).nonOpaque()));

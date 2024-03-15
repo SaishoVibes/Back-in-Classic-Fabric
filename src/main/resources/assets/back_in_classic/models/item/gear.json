@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "back_in_classic:item/cogwheel"
+    "layer0": "back_in_classic:block/cogwheel_spinning"
   }
 }
