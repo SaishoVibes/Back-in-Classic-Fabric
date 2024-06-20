@@ -72,10 +72,10 @@ public interface BackInClassicBlocks {
     Block PETRIFIED_OAK_STAIRS = createBlock("petrified_oak_stairs", new StairsBlock(PETRIFIED_OAK_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
 
     // FLOWER POTS
-    Block POTTED_RED_ROSE = createBlock("potted_red_rose", new FlowerPotBlock(RED_ROSE, FabricBlockSettings.copyOf(Blocks.POTTED_RED_TULIP).nonOpaque()));
-    Block POTTED_BLUE_ROSE = createBlock("potted_blue_rose", new FlowerPotBlock(BLUE_ROSE, FabricBlockSettings.copyOf(Blocks.POTTED_RED_TULIP).nonOpaque()));
-    Block POTTED_PAEONIA = createBlock("potted_paeonia", new FlowerPotBlock(PAEONIA, FabricBlockSettings.copyOf(Blocks.POTTED_RED_TULIP).nonOpaque()));
-    Block POTTED_SHRUB = createBlock("potted_shrub", new FlowerPotBlock(SHRUB, FabricBlockSettings.copyOf(Blocks.POTTED_RED_TULIP).nonOpaque()));
+    Block POTTED_RED_ROSE = createBlock("potted_red_rose", new FlowerPotBlock(RED_ROSE, FabricBlockSettings.create().nonOpaque()));
+    Block POTTED_BLUE_ROSE = createBlock("potted_blue_rose", new FlowerPotBlock(BLUE_ROSE, FabricBlockSettings.create().nonOpaque()));
+    Block POTTED_PAEONIA = createBlock("potted_paeonia", new FlowerPotBlock(PAEONIA, FabricBlockSettings.create().nonOpaque()));
+    Block POTTED_SHRUB = createBlock("potted_shrub", new FlowerPotBlock(SHRUB, FabricBlockSettings.create().nonOpaque()));
 
     static Block createBlock(String name, Block block) {
         return createBlock(name, block, new BlockItem(block, new FabricItemSettings()));
