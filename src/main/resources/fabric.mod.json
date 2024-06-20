@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "back_in_classic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "accessWidener" : "backinclassic.accesswidener",
 
   "name": "Back in Classic",
