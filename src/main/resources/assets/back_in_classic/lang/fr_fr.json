@@ -61,7 +61,8 @@
   "block.back_in_classic.sod_block": "Bloc de Gazon",
   "itemGroup.back_in_classic.bic_group": "Retour au Classique",
   "back_in_classic.itemgroup": "etour au Classique",
-  "biome.back_in_classic.rainy_forest": "Forêt Tropicale",
-  "block.back_in_classic.blue_rose_flower": "Rose bleue",
-  "block.back_in_classic.rose_flower": "Rose Rouge"
+  "block.back_in_classic.petrified_oak_log": "Bûche en chêne pétrifié",
+  "block.back_in_classic.petrified_oak_planks": "Planches de chêne pétrifié",
+  "block.back_in_classic.petrified_oak_wood": "Bois de chêne pétrifié",
+  "block.back_in_classic.petrified_oak_stairs": "Escalier en chêne pétrifié"
 }
