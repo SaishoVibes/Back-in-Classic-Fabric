@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "back_in_classic:block/petrified_oak_planks",
+    "particle": "back_in_classic:block/petrified_oak_planks"
+  }
+}

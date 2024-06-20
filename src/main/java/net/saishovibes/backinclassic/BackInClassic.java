@@ -18,7 +18,7 @@ public class BackInClassic implements ModInitializer {
     @Override
     public void onInitialize() {
         BackInClassicBlocks.init();
-        BackInClassicItems.init();
+        BackInClassicItems.RegisterItemGroups();
         UseBlockCallback.EVENT.register(CauldronBrewing::interact);
         UseBlockCallback.EVENT.register(NetherReactorIgnition::interact);
         LOGGER.info("Back in Classic Mod Initialized!");

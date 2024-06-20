@@ -1,5 +1,6 @@
 package net.saishovibes.backinclassic.registry;
 
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -27,7 +28,7 @@ public interface BackInClassicBlocks {
     Block COGWHEEL = createBlock("cogwheel", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
     Block DEBUG_BLOCK = createBlock("debug_block", new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
     Block DIRT_SLAB = createBlock("dirt_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT).nonOpaque()));
-    Block GEAR = createBlock("gear", new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_WIRE).nonOpaque()));
+    Block GEAR = createBlock("gear", new Block(FabricBlockSettings.copyOf(Blocks.COBWEB).nonOpaque()));
     Block GLOWING_OBSIDIAN = createBlock("glowing_obsidian", new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).luminance(10)));
     Block INF_LAVA = createBlock("infinite_lava", new Block(FabricBlockSettings.copyOf(Blocks.LAVA).nonOpaque()));
     Block INF_WATER = createBlock("infinite_water", new Block(FabricBlockSettings.copyOf(Blocks.WATER).nonOpaque()));
@@ -35,7 +36,12 @@ public interface BackInClassicBlocks {
     Block NETHER_REACTOR = createBlock("nether_reactor_core", new Block(FabricBlockSettings.copyOf(Blocks.GLOWSTONE).luminance(12)));
     Block SOD_BLOCK = createBlock("sod_block", new Block(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK)));
     Block SOD_SLAB = createBlock("sod_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.MOSS_BLOCK).nonOpaque()));
-    Block CRUSHED_GRAVEL = createBlock("crushed_gravel", new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
+    Block CRUSHED_GRAVEL = createBlock("crushed_gravel", new FallingBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)) {
+        @Override
+        protected MapCodec<? extends FallingBlock> getCodec() {
+            return null;
+        }
+    });
 
     Block BLUE_ROSE = createBlock("blue_rose", new FlowerBlock(StatusEffects.LUCK, 0, FabricBlockSettings.copyOf(Blocks.BLUE_ORCHID).nonOpaque()));
     Block PAEONIA = createBlock("paeonia_flower", new FlowerBlock(StatusEffects.NAUSEA, 0, FabricBlockSettings.copyOf(Blocks.PINK_TULIP).nonOpaque()));
@@ -58,6 +64,12 @@ public interface BackInClassicBlocks {
     Block WATER_BREATH_CAULDRON = createBlock("water_breathing_cauldron", PotionCauldronBlock.of(Potions.WATER_BREATHING));
     Block WEAKNESS_CAULDRON = createBlock("weakness_cauldron", PotionCauldronBlock.of(Potions.WEAKNESS));
     Block TURTLE_MASTER_CAULDRON = createBlock("turtle_master_cauldron", PotionCauldronBlock.of(Potions.TURTLE_MASTER));
+
+    // PETRIFIED WOOD SET
+    Block PETRIFIED_OAK_LOG = createBlock("petrified_oak_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_WOOD = createBlock("petrified_oak_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_PLANKS = createBlock("petrified_oak_planks", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_STAIRS = createBlock("petrified_oak_stairs", new StairsBlock(PETRIFIED_OAK_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
 
     static Block createBlock(String name, Block block) {
         return createBlock(name, block, new BlockItem(block, new FabricItemSettings()));

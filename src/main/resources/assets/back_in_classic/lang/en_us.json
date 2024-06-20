@@ -59,5 +59,6 @@
   "block.back_in_classic.inverse_gear": "Reverse Gear",
   "block.back_in_classic.wax_block": "Wax Block",
   "block.back_in_classic.sod_block": "Sod Block",
-  "itemGroup.back_in_classic.bic_group": "Back In Classic"
+  "itemGroup.back_in_classic.bic_group": "Back In Classic",
+  "back_in_classic.itemgroup": "Back In Classic"
 }

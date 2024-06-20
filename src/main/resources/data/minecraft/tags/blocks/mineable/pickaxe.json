@@ -21,6 +21,10 @@
     "back_in_classic:glowing_obsidian",
     "back_in_classic:cogwheel",
     "back_in_classic:gear",
-    "back_in_classic:inverse_gear"
+    "back_in_classic:inverse_gear",
+    "back_in_classic:petrified_oak_log",
+    "back_in_classic:petrified_oak_wood",
+    "back_in_classic:petrified_oak_planks",
+    "back_in_classic:petrified_oak_stairs"
   ]
 }
