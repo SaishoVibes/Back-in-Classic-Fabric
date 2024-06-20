@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "back_in_classic",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "accessWidener" : "backinclassic.accesswidener",
 
   "name": "Back in Classic",
@@ -10,8 +10,8 @@
     "SaishoVibes"
   ],
   "contact": {
-    "homepage": "https://github.com/SaishoVibes/Back-in-Classic",
-    "sources": "https://github.com/SaishoVibes/Back-in-Classic"
+    "homepage": "https://github.com/SaishoVibes/Back-in-Classic-Fabric",
+    "sources": "https://github.com/SaishoVibes/Back-in-Classic-Fabric"
   },
 
   "license": "CC0-1.0",
