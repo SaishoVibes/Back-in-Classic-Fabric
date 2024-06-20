@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "back_in_classic:potted_shrub"
+          "name": "back_in_classic:shrub"
         }
       ],
       "rolls": 1.0
