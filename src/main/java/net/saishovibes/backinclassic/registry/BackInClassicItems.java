@@ -32,9 +32,10 @@ public class BackInClassicItems {
         });
     }*/
     public static void RegisterItemGroups() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
+        /*ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(entries -> {
             entries.add(BackInClassicBlocks.INF_WATER);
             entries.add(BackInClassicBlocks.INF_LAVA);
+            entries.add(BackInClassicBlocks.AWKWARD_CAULDRON);
             entries.add(BackInClassicBlocks.FIRE_RES_CAULDRON);
             entries.add(BackInClassicBlocks.HARM_CAULDRON);
             entries.add(BackInClassicBlocks.HEAL_CAULDRON);
@@ -50,7 +51,7 @@ public class BackInClassicItems {
             entries.add(BackInClassicBlocks.TURTLE_MASTER_CAULDRON);
             entries.add(BackInClassicBlocks.WATER_BREATH_CAULDRON);
             entries.add(BackInClassicBlocks.WEAKNESS_CAULDRON);
-        });
+        });*/
         Registry.register(Registries.ITEM_GROUP, BACKINCLASSIC_GROUP, FabricItemGroup.builder().displayName(Text.translatable("back_in_classic.itemgroup")).icon(() -> new ItemStack(BackInClassicBlocks.WAX_BLOCK.asItem())).entries((displayContext, entries) -> {
             entries.add(BackInClassicBlocks.WAX_BLOCK);
             entries.add(BackInClassicBlocks.SOD_BLOCK);
@@ -64,7 +65,10 @@ public class BackInClassicItems {
             entries.add(BackInClassicBlocks.SHRUB);
             entries.add(BackInClassicBlocks.NETHER_REACTOR);
             entries.add(BackInClassicBlocks.COGWHEEL);
-            entries.add(BackInClassicBlocks.AWKWARD_CAULDRON);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_LOG);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_WOOD);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_PLANKS);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_STAIRS);
 
         }).build());
         ITEMS.forEach((id, item) -> {

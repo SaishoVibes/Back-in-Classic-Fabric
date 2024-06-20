@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "back_in_classic:block/petrified_oak_planks",
+    "side": "back_in_classic:block/petrified_oak_planks",
+    "top": "back_in_classic:block/petrified_oak_planks"
+  }
+}

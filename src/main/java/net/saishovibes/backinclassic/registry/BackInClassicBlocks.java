@@ -65,6 +65,13 @@ public interface BackInClassicBlocks {
     Block WEAKNESS_CAULDRON = createBlock("weakness_cauldron", PotionCauldronBlock.of(Potions.WEAKNESS));
     Block TURTLE_MASTER_CAULDRON = createBlock("turtle_master_cauldron", PotionCauldronBlock.of(Potions.TURTLE_MASTER));
 
+    // PETRIFIED WOOD SET
+
+    Block PETRIFIED_OAK_LOG = createBlock("petrified_oak_log", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
+    Block PETRIFIED_OAK_WOOD = createBlock("petrified_oak_wood", new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_PILLAR)));
+    Block PETRIFIED_OAK_PLANKS = createBlock("petrified_oak_planks", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_STAIRS = createBlock("petrified_oak_stairs", new Block(FabricBlockSettings.copyOf(Blocks.STONE_STAIRS)));
+
     static Block createBlock(String name, Block block) {
         return createBlock(name, block, new BlockItem(block, new FabricItemSettings()));
     }
