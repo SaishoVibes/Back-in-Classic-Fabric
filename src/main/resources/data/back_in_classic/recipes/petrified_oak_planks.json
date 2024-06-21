@@ -4,7 +4,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "minecraft:petrified_oak_logs"
+      "tag": "back_in_classic:petrified_oak_logs"
     }
   ],
   "result": {
