@@ -65,5 +65,13 @@
   "block.back_in_classic.petrified_oak_planks": "石化橡木板",
   "block.back_in_classic.petrified_oak_wood": "石化橡木",
   "block.back_in_classic.petrified_oak_stairs": "石化橡木楼梯",
-  "block.back_in_classic.crushed_gravel": "碎石"
+  "block.back_in_classic.crushed_gravel": "碎石",
+  "block.back_in_classic.petrified_oak_button": "Petrified Oak Button",
+  "block.back_in_classic.petrified_oak_pressure_plate": "Petrified Oak Pressure Plate",
+  "block.back_in_classic.petrified_oak_fence": "Petrified Oak Fence",
+  "block.back_in_classic.petrified_oak_fence_gate": "Petrified Oak Fence Gate",
+  "block.back_in_classic.petrified_oak_door": "Petrified Oak Door",
+  "block.back_in_classic.petrified_oak_trapdoor": "Petrified Oak Trapdoor",
+  "block.back_in_classic.petrified_oak_sign": "Petrified Oak Sign",
+  "block.back_in_classic.petrified_oak_hanging_sign": "Petrified Oak Hanging Sign"
 }

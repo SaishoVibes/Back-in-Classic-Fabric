@@ -81,6 +81,9 @@ public interface BackInClassicBlocks {
     Block PETRIFIED_OAK_TRAPDOOR = createBlock("petrified_oak_trapdoor", new TrapdoorBlock(PETRIFIED_OAK_SET, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
     Block STRIPPED_PETRIFIED_OAK_LOG = createBlock("stripped_petrified_oak_log", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
     Block STRIPPED_PETRIFIED_OAK_WOOD = createBlock("stripped_petrified_oak_wood", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_SIGN = createBlock("petrified_oak_sign", new SignBlock(WoodType.ACACIA, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_HANGING_SIGN = createBlock("petrified_oak_hanging_sign", new HangingSignBlock(WoodType.ACACIA, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+
 
 
     // FLOWER POTS

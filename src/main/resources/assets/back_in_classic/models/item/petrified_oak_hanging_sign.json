@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "back_in_classic:item/petrified_oak_hanging_sign"
+  }
+}
