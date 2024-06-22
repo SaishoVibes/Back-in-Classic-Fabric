@@ -90,6 +90,16 @@
     "back_in_classic:petrified_oak_planks",
     "back_in_classic:petrified_oak_stairs",
     "back_in_classic:petrified_oak_log",
-    "back_in_classic:petrified_oak_wood"
+    "back_in_classic:petrified_oak_wood",
+    "back_in_classic:petrified_oak_fence",
+    "back_in_classic:petrified_oak_fence_gate",
+    "back_in_classic:petrified_oak_button",
+    "back_in_classic:petrified_oak_pressure_plate",
+    "back_in_classic:petrified_oak_hanging_sign",
+    "back_in_classic:petrified_oak_sign",
+    "back_in_classic:petrified_oak_door",
+    "back_in_classic:petrified_oak_trapdoor",
+    "back_in_classic:stripped_petrified_oak_log",
+    "back_in_classic:stripped_petrified_oak_wood"
   ]
 }

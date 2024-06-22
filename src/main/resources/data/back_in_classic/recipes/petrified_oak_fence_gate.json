@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_stairs",
+  "key": {
+    "$": {
+      "item": "back_in_classic:petrified_oak_planks"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#$#",
+    "#$#"
+  ],
+  "result": {
+    "count": 1,
+    "item": "back_in_classic:petrified_oak_fence_gate"
+  }
+}

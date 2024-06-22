@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "back_in_classic:petrified_oak_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "back_in_classic:petrified_oak_button"
+  }
+}
