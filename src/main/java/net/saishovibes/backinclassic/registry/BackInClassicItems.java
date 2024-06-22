@@ -67,8 +67,16 @@ public class BackInClassicItems {
             entries.add(BackInClassicBlocks.COGWHEEL);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_LOG);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_WOOD);
+            entries.add(BackInClassicBlocks.STRIPPED_PETRIFIED_OAK_LOG);
+            entries.add(BackInClassicBlocks.STRIPPED_PETRIFIED_OAK_WOOD);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_PLANKS);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_STAIRS);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_BUTTON);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_PRESSURE_PLATE);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_FENCE);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_FENCE_GATE);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_DOOR);
+            entries.add(BackInClassicBlocks.PETRIFIED_OAK_TRAPDOOR);
 
         }).build());
         ITEMS.forEach((id, item) -> {

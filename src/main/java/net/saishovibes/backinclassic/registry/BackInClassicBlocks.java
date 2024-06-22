@@ -3,7 +3,9 @@ package net.saishovibes.backinclassic.registry;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffects;
@@ -66,10 +68,20 @@ public interface BackInClassicBlocks {
     Block TURTLE_MASTER_CAULDRON = createBlock("turtle_master_cauldron", PotionCauldronBlock.of(Potions.TURTLE_MASTER));
 
     // PETRIFIED WOOD SET
+    BlockSetType PETRIFIED_OAK_SET = new BlockSetType("petrified_oak");
     Block PETRIFIED_OAK_LOG = createBlock("petrified_oak_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
     Block PETRIFIED_OAK_WOOD = createBlock("petrified_oak_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
     Block PETRIFIED_OAK_PLANKS = createBlock("petrified_oak_planks", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
     Block PETRIFIED_OAK_STAIRS = createBlock("petrified_oak_stairs", new StairsBlock(PETRIFIED_OAK_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block PETRIFIED_OAK_BUTTON = createBlock("petrified_oak_button", new ButtonBlock(PETRIFIED_OAK_SET, 20, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_PRESSURE_PLATE = createBlock("petrified_oak_pressure_plate", new PressurePlateBlock(PETRIFIED_OAK_SET, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_FENCE = createBlock("petrified_oak_fence", new FenceBlock(FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_FENCE_GATE = createBlock("petrified_oak_fence_gate", new FenceGateBlock(WoodType.ACACIA, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_DOOR = createBlock("petrified_oak_door", new DoorBlock(PETRIFIED_OAK_SET, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block PETRIFIED_OAK_TRAPDOOR = createBlock("petrified_oak_trapdoor", new TrapdoorBlock(PETRIFIED_OAK_SET, FabricBlockSettings.copyOf(PETRIFIED_OAK_PLANKS)));
+    Block STRIPPED_PETRIFIED_OAK_LOG = createBlock("stripped_petrified_oak_log", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    Block STRIPPED_PETRIFIED_OAK_WOOD = createBlock("stripped_petrified_oak_wood", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+
 
     // FLOWER POTS
     Block POTTED_RED_ROSE = createBlock("potted_red_rose", new FlowerPotBlock(RED_ROSE, FabricBlockSettings.create().nonOpaque()));
