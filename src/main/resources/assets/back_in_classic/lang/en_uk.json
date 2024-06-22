@@ -59,11 +59,18 @@
   "block.back_in_classic.inverse_gear": "Inverse Gear",
   "block.back_in_classic.wax_block": "Wax Block",
   "block.back_in_classic.sod_block": "Sod Block",
+  "block.back_in_classic.crushed_gravel": "Crushed Gravel",
   "itemGroup.back_in_classic.bic_group": "Back In Classic",
   "back_in_classic.itemgroup": "Back In Classic",
   "block.back_in_classic.petrified_oak_log": "Petrified Oak Log",
   "block.back_in_classic.petrified_oak_planks": "Petrified Oak Planks",
   "block.back_in_classic.petrified_oak_wood": "Petrified Oak Wood",
   "block.back_in_classic.petrified_oak_stairs": "Petrified Oak Stairs",
-  "block.back_in_classic.crushed_gravel": "Crushed Gravel"
+  "block.back_in_classic.petrified_oak_button": "Petrified Oak Button",
+  "block.back_in_classic.petrified_oak_pressure_plate": "Petrified Oak Pressure Plate",
+  "block.back_in_classic.petrified_oak_fence": "Petrified Oak Fence",
+  "block.back_in_classic.petrified_oak_fence_gate": "Petrified Oak Fence Gate",
+  "block.back_in_classic.petrified_oak_door": "Petrified Oak Door",
+  "block.back_in_classic.petrified_oak_trapdoor": "Petrified Oak Trapdoor",
+  
 }

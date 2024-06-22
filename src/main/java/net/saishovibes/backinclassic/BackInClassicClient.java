@@ -15,5 +15,7 @@ public class BackInClassicClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BackInClassicBlocks.POTTED_RED_ROSE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BackInClassicBlocks.POTTED_PAEONIA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BackInClassicBlocks.POTTED_SHRUB, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BackInClassicBlocks.PETRIFIED_OAK_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BackInClassicBlocks.PETRIFIED_OAK_TRAPDOOR, RenderLayer.getCutout());
     }
 }

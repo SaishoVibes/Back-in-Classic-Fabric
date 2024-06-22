@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "back_in_classic:block/petrified_oak_door_bottom",
+    "top": "back_in_classic:block/petrified_oak_door_top"
+  }
+}

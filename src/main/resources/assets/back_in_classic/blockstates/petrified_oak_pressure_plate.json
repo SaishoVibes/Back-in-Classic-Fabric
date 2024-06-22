@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "back_in_classic:block/petrified_oak_pressure_plate"
+    },
+    "powered=true": {
+      "model": "back_in_classic:block/petrified_oak_pressure_plate_down"
+    }
+  }
+}
