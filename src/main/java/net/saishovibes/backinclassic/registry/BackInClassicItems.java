@@ -77,8 +77,8 @@ public class BackInClassicItems {
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_FENCE_GATE);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_DOOR);
             entries.add(BackInClassicBlocks.PETRIFIED_OAK_TRAPDOOR);
-            entries.add(BackInClassicBlocks.PETRIFIED_OAK_SIGN);
-            entries.add(BackInClassicBlocks.PETRIFIED_OAK_HANGING_SIGN);
+            //entries.add(BackInClassicBlocks.PETRIFIED_OAK_SIGN);
+            //entries.add(BackInClassicBlocks.PETRIFIED_OAK_HANGING_SIGN);
 
         }).build());
         ITEMS.forEach((id, item) -> {
